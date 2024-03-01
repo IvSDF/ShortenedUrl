@@ -6,10 +6,6 @@ use App\Models\ShortenedUrl;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 
-function base62_encode(string $hashedUrl)
-{
-}
-
 class ShortenUrlService implements ShortCodeGeneratorInterface
 {
     public function generateShortCode($url): string
