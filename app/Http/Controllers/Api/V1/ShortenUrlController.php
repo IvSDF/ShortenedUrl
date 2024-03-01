@@ -29,7 +29,7 @@ class ShortenUrlController extends Controller
         return response()->json(['shortened_url' => route('shorten.redirect', $shortCode)]);
     }
 
-    public function redirect($shortCode)
+    public function redirect($shortCode): string
     {
         $url = $this->shortenUrlService->getOriginalUrl($shortCode);
 

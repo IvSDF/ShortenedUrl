@@ -10,9 +10,9 @@ function base62_encode(string $hashedUrl)
 {
 }
 
-class ShortenUrlService
+class ShortenUrlService implements ShortCodeGeneratorInterface
 {
-    public function generateShortCode($url)
+    public function generateShortCode($url): string
     {
         $shortCode = rtrim(strtr(base64_encode($url), '+/', '-_'), '=');
 
