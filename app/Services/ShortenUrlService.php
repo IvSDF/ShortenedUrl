@@ -24,7 +24,7 @@ class ShortenUrlService implements ShortCodeGeneratorInterface
         return $shortCode;
     }
 
-    public function getOriginalUrl($shortCode)
+    public function getOriginalUrl($shortCode): string
     {
         try {
 
